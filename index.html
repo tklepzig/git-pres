@@ -27,6 +27,21 @@
 			border: none;
 			box-shadow: none;
 		}
+
+		.reveal section h1,
+		.reveal section h2 {
+			color: #e25d45;
+		}
+
+		.reveal pre {
+			font-size: 1em;
+			width: auto;
+			padding: 15px;
+			word-wrap: normal;
+			overflow: auto;
+			background-color: #3F3F3F;
+			color: white;
+		}
 	</style>
 
 	<!-- Printing and PDF exports -->
@@ -62,7 +77,7 @@
 		<div class="slides">
 			<section>
 				<div>
-					<img src="http://git-scm.com/images/logos/downloads/Git-Logo-1788C.png" alt="Git logo" style="width: 400px;">
+					<img src="images/git-logo.png" alt="Git Logo" style="width: 400px;">
 				</div>
 				<p>
 					Commit often,
@@ -78,24 +93,28 @@
 				<img src="images/distributed.png" class="stretch" alt="">
 			</section>
 			<section>
-				<h2>Repository Bezeichnungen</h2>
-				<ul>
-					<li>Remote Repository</li>
-					<li>Klonen: Local Repository</li>
-					<li>Commit nur lokal</li>
-				</ul>
-				<aside class="notes">
-					Jeder Klon ist eine komplette Kopie (extrem komprimiert), könnte jederzeit als Backup dienen
-				</aside>
+				<h2>Git Bash</h2>
+				<pre>$ git &lt;verb&gt;</pre>
+				<pre>$ git help &lt;verb&gt;</pre>
 			</section>
 			<section>
+				<h2>Bezeichnungen</h2>
+				<ul>
+					<li>Remote Repository</li>
+					<li>Local Repository</li>
+					<li>Commit</li>
+				</ul>
+			</section>
+
+			<!-- <section>
 				<h2>Kommunikation mit dem Remote Repository</h2>
 				<ul>
+					<li>Commits nur lokal</li>
 					<li>Lokale Commits schicken: <b>push</b></li>
 					<li>Änderungen vom Server holen: <b>fetch</b> &amp; <b>merge</b></li>
 					<li>Immer nur pro aktuell ausgewählter Branch</li>
 				</ul>
-			</section>
+			</section> -->
 
 		</div>
 	</div>
