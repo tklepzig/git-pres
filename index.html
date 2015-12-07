@@ -37,7 +37,7 @@
 			font-size: 1em;
 			width: auto;
 			padding: 15px;
-			word-wrap: normal;
+			word-wrap: break-word;
 			overflow: auto;
 			background-color: #3F3F3F;
 			color: white;
@@ -60,19 +60,7 @@
 
 <body>
 
-	<!-- - DVCS
-	- Git scannt Dateien
-	- Git beginnt schon mit Branch: master
-	- Git vs. TFVC
-	- Commit - Changeset
-	- Tag - label
-	- Stashing - Shelving
-	- Staging Area
-	- Git Konsole, Bash Basics
-	- Workflow anhand Bsp., grundlegende Git Befehle, Branching, Merging -->
-
 	<div class="reveal">
-
 		<!-- Any section element inside of this container is displayed as a slide -->
 		<div class="slides">
 			<section>
@@ -93,29 +81,20 @@
 				<img src="images/distributed.png" class="stretch" alt="">
 			</section>
 			<section>
-				<h2>Git Bash</h2>
-				<pre>$ git &lt;verb&gt;</pre>
-				<pre>$ git help &lt;verb&gt;</pre>
+				<h1>Git Bash</h1>
 			</section>
 			<section>
-				<h2>Bezeichnungen</h2>
-				<ul>
-					<li>Remote Repository</li>
-					<li>Local Repository</li>
-					<li>Commit</li>
-				</ul>
+				<pre>$ git &lt;verb&gt;</pre>
+				<pre>$ git help &lt;verb&gt;
+$ git &lt;verb&gt; --help</pre>
 			</section>
+			<section>
+				<pre>$ git init
 
-			<!-- <section>
-				<h2>Kommunikation mit dem Remote Repository</h2>
-				<ul>
-					<li>Commits nur lokal</li>
-					<li>Lokale Commits schicken: <b>push</b></li>
-					<li>Änderungen vom Server holen: <b>fetch</b> &amp; <b>merge</b></li>
-					<li>Immer nur pro aktuell ausgewählter Branch</li>
-				</ul>
-			</section> -->
+$ touch file-1.txt
 
+$ git add file-1.txt</pre>
+			</section>
 		</div>
 	</div>
 
