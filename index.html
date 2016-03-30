@@ -95,12 +95,18 @@
 					<pre>$ git help &lt;verb&gt;
 $ git &lt;verb&gt; --help</pre>
 				</section>
+			</section>
+
+
+
+			<section>
 				<section>
-					<pre>$ git init
-
-$ touch file-1.txt
-
-$ git add file-1.txt</pre>
+					<h1>Mit Git arbeiten</h1>
+				</section>
+				<section>
+					<pre>$ git init</pre>
+					<pre>$ touch file-1.txt</pre>
+					<pre>$ git add file-1.txt</pre>
 				</section>
 				<section>
 					<img src="images/lifecycle_step-1.png" class="stretch" alt="">
@@ -136,8 +142,114 @@ $ git commit -m "changed file"</pre>
 					<pre>$ git log</pre>
 					<pre>git log alias mit so allem drum und dran...</pre>
 				</section>
+				<section>
+					<h2>Tags</h2>
+					<ul>
+						<li>Entspricht einem <i>Label</i> im TFVC</li>
+						<li><pre>$ git tag v1.0.0</pre></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Stash</h2>
+					<ul>
+						<li>Ist änhlich dem <i>Shelven</i> im TFVC</li>
+						<li><pre>$ git stash</pre></li>
+						<li><pre>$ git stash pop</pre></li>
+						<p class="alert">&rarr; Existiert nur lokal</p>
+					</ul>
+				</section>
 			</section>
 
+
+
+			<section>
+				<section>
+					<h1>Branching</h1>
+				</section>
+				<section>
+					<h2>Warum &amp; wozu?</h2>
+				</section>
+				<section>
+					<ul>
+						<li>Produktive, funktionierende Version gewährleisten</li>
+						<li class="fragment">Dinge ausprobieren, ohne den vorhandenen Code zu gefährden</li>
+						<li class="fragment">Einzelne Features bzw. Programmteile im Entwicklungsprozess isolieren</li>
+						<li class="fragment">...</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Branches benennen</h2>
+				</section>
+				<section>
+					<ul>
+						<li>Darf kein ASCII Steuerzeichen enthalten</li>
+						<li class="fragment">Keines der folgenden Zeichen darf vorkommen: Leerzeichen, Tilde (~), Caret (^), Doppelpunkt, Fragezeichen, Asterisk (*), Öffnende eckige Klammer ([)</li>
+						<li class="fragment">Darf kein Backslash enthalten</li>
+					</ul>
+					<p class="fragment">Vollständige Liste: <a href="https://www.kernel.org/pub/software/scm/git/docs/git-check-ref-format.html">git-check-ref-format Manual Page</a></p>
+				</section>
+				<section>
+					<ul>
+						<li>Nutzerverwaltung</li>
+						<li class="fragment">ValidierungBeiPasswortAenderung</li>
+						<li class="fragment">103279</li>
+						<li class="fragment">HochgeladeneDateiMaximal5MB</li>
+						<li class="fragment">GesperrterNutzerWirdNichtNach5MinutenEntsperrt</li>
+					</ul>
+				</section>
+				<section data-background="https://i.imgur.com/iWKad22.jpg">
+				</section>
+				<section>
+					<h2>Besser</h2>
+					<ul>
+						<li>Kurze und prägnante Namen</li>
+						<li class="fragment">Hierarchische Bezeichnungen</li>
+						<li class="fragment">Keine bloße Zahl</li>
+						<li class="fragment">CamelCase vermeiden, Wörter mit Minus trennen</li>
+					</ul>
+				</section>
+				<section>
+					<ul>
+						<li>feature/nutzerverwaltung</li>
+						<li class="fragment">bugfix/validiere-passwort</li>
+						<li class="fragment">release/v1.0.0</li>
+						<li class="fragment">junk/ovale-buttons</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Warum den Slash als Hierarchie-Trenner?</h3>
+					<ul>
+						<li>Git behandelt die Hierarchie als Verzeichnisse</li>
+						<li>Auto Complete in der Bash ist schneller</li>
+						<li>Versch. grafische Tools (bspw. SourceTree) stellen die Branches ebenfalls als Ordner dar</li>
+					</ul>
+				</section>
+				<section>
+					<p>Alles nur Best Practices, wenn es einem gar nicht zusagt, kann man es auch komplett anders machen</p>
+				</section>
+				<section>
+					<h2>Mit Branches arbeiten</h2>
+				</section>
+				<section>
+					<pre>$ git branch develop
+$ git checkout develop</pre>
+					<pre>$ git checkout -b develop master</pre>
+				</section>
+				<section>
+					<h2>Fast-Forward vs. Recursive Merge</h2>
+				</section>
+				<section>
+					<h2>Rebasing</h2>
+				</section>
+				<section>
+					<h2>Synchronisation</h2>
+					<ul>
+						<li>Vermeiden von umfangreichem Merge am Ende</li>
+						<li><pre>$ git checkout feature/user-mgmt
+$ git merge develop</pre></li>
+					</ul>
+				</section>
+			</section>
 
 
 
