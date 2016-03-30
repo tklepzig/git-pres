@@ -167,6 +167,12 @@ $ git commit -m "changed file"</pre>
 					<h1>Branching</h1>
 				</section>
 				<section>
+					<h2>Branches sind nur Zeiger</h2>
+				</section>
+				<section>
+					<h2>Ein Repository ist immer nur im Kontext eines Branches</h2>
+				</section>
+				<section>
 					<h2>Warum &amp; wozu?</h2>
 				</section>
 				<section>
@@ -255,15 +261,66 @@ $ git merge develop</pre></li>
 
 			<section>
 				<section>
+					<h1>Arbeiten mit Remote Repositories</h1>
+				</section>
+				<section>
+					<h2>Vorhandenes Repository klonen</h2>
+					<pre>$ git clone <i>Remote-URL</i></pre>
+				</section>
+				<section>
+					<h2>Änderungen abholen</h2>
+					<pre>$ git fetch</pre>
+				</section>
+				<section>
+					<h2>Änderungen in das Arbeitsverzeichnis mergen</h2>
+					<pre>$ git merge</pre>
+					<p>&rarr; Entscheidet selbst, ob es ein recursive oder fast-forward Merge ist</p>
+				</section>
+				<section>
+					<h2>Warum man git pull nicht verwenden sollte</h2>
+				</section>
+				<section>
+					<h2>Workflow: Änderungen vom zentralen Repository integrieren</h2>
+					<ul>
+						<li class="alert">Kein pull verwenden</li>
+						<li>Erst fetchen (
+							<span class="highlight">git fetch</span>)</li>
+						<li>Anschließend mergen (
+							<span class="highlight">git merge --ff-only</span>)</li>
+						<ul>
+							<li>Bei Fehlschlag (Fast-Forward nicht möglich):
+								<span class="highlight">git rebase</span>
+							</li>
+							<li>Bei Merge-Konflikten:
+								<span class="highlight">git mergetool</span>
+								<ul>
+									<li>Anschließend
+										<span class="highlight">git rebase --continue</span> aufrufen</li>
+								</ul>
+							</li>
+						</ul>
+					</ul>
+					</ul>
+				</section>
+				<section>
+					<h2 class="alert">Rebase niemals bei bereits veröffentlichten Commits anwenden!</h2>
+				</section>
+				<section>
+					<h2>Lokale Commits veröffentlichen</h2>
+					<pre>$ git push</pre>
+					<p class="alert">&rarr; Immer nur für den Branch, in dem man sich gerade befindet</p>
+				</section>
+			</section>
+
+
+			<section>
+				<section>
 					<h1>Learning by doing</h1>
 				</section>
-				<section>Benutzername und E-Mail setzen</section>
+				<section>TODO Setup Script ausführen</section>
 			</section>
 		</div>
 	</div>
-
-	<!-- git log --graph --all --oneline --decorate -->
-
 
 	<script src="lib/js/head.min.js"></script>
 	<script src="js/reveal.js"></script>
