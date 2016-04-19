@@ -189,7 +189,8 @@ $ git commit -m "changed file"</pre>
 				<section>
 					<ul>
 						<li>Darf kein ASCII Steuerzeichen enthalten</li>
-						<li class="fragment">Keines der folgenden Zeichen darf vorkommen: Leerzeichen, Tilde (~), Caret (^), Doppelpunkt, Fragezeichen, Asterisk (*), Öffnende eckige Klammer ([)</li>
+						<li class="fragment">Keines der folgenden Zeichen darf vorkommen: Leerzeichen, Tilde (~), Caret (^), Doppelpunkt, Fragezeichen, Asterisk
+							(*), Öffnende eckige Klammer ([)</li>
 						<li class="fragment">Darf kein Backslash enthalten</li>
 					</ul>
 					<p class="fragment">Vollständige Liste: <a href="https://www.kernel.org/pub/software/scm/git/docs/git-check-ref-format.html">git-check-ref-format Manual Page</a></p>
@@ -315,9 +316,93 @@ $ git merge develop</pre></li>
 
 			<section>
 				<section>
-					<h1>Learning by doing</h1>
+					<h1>Learning by doing...</h1>
 				</section>
-				<section>TODO Setup Script ausführen</section>
+				<section>
+					<h2>Aufgabe</h2>
+					<p>Erstellen einer Datei mit sechs Dingen, jedes repräsentiert dabei ein Commit</p>
+				</section>
+				<section>
+					<h3>Repository klonen</h3>
+					<pre>https://github.com/tklepzig/git-alice.git</pre>
+				</section>
+				<section>
+					<h3>Inhalt von things.txt</h3>
+					<pre style="font-size: 0.9em;">Six impossible things before breakfast:</pre>
+				</section>
+				<section>
+					<h3>Neuen Branch <b class="highlight">develop</b> erstellen und von <b class="highlight">master</b> abzweigen</h3>
+				</section>
+				<section>
+					<h3>Neue Zeile</h3>
+					<pre style="overflow: hidden;">1. There's a potion that can make you shrink.</pre>
+				</section>
+				<section>
+					<h3>Neue Zeile</h3>
+					<pre>2. And a fruit that can make you grow.</pre>
+				</section>
+				<section>
+					<h3>Commit often, perfect later</h3>
+				</section>
+				<section>
+					<h3>Letzten Commit korrigieren</h3>
+					<pre>2. And a <i style="text-decoration: line-through;">fruit</i> <b class="highlight">cake</b> that can make you grow.</pre>
+				</section>
+				<section>
+					<h3>Zum Remote Repository pushen</h3>
+				</section>
+				<section>
+					<h3>Neue Zeile</h3>
+					<pre>3. Animals can talk.</pre>
+				</section>
+				<section>
+					<h3>Neue Zeile</h3>
+					<pre>4. <b class="highlight"><b style="color: red;">Dogs</b>/Cats</b> can disappear.</pre>
+				</section>
+				<section>
+					<h3>Zum Remote Repository pushen</h3>
+				</section>
+				<section>
+					<h3>Push ist nicht erlaubt</h3>
+					<p>Änderungen vom Remote Repository holen</p>
+					<p>Merge-Konflikte auflösen</p>
+					<p>Anschließend pushen</p>
+				</section>
+				<section>
+					<h3>Beta-Release erstellen</h3>
+					<p>develop nach master mergen und pushen</p>
+					<p>Tag <b class="highlight">v1.0.0-beta</b> erstellen und pushen</p>
+					<p>Weiter auf develop entwickeln</p>
+				</section>
+				<section>
+					<h3>Neue Zeile</h3>
+					<pre>5. There is a place called Wonderland.</pre>
+				</section>
+				<section>
+					<h3>Neue Zeile</h3>
+					<pre>6. I can slay the Jabberwocky.</pre>
+				</section>
+				<section>
+					<h3>Zum Remote Repository pushen</h3>
+				</section>
+				<section>
+					<h3>Release erstellen</h3>
+					<p>develop nach master mergen und pushen</p>
+					<p>Tag <b class="highlight">v1.0.0</b> erstellen und pushen</p>
+				</section>
+				<section>
+					<h3>Fertige Datei:</h3>
+					<pre style="font-size: 0.9em;">Six impossible things before breakfast:
+1. There's a potion that can make you shrink.
+2. And a cake that can make you grow.
+3. Animals can talk.
+4. Cats can disappear.
+5. There is a place called Wonderland.
+6. I can slay the Jabberwocky.</pre>
+				</section>
+			</section>
+			<section>
+				<h1>Fragen? Fragen!</h1>
 			</section>
 		</div>
 	</div>
